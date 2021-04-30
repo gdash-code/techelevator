@@ -7,11 +7,11 @@
 # The script will then prompt the user for name, email, cohort and bitbucket team before configuring
 # their diff tool settings and setting the upstream repository.
 
+
 echo
 read -r -p "Enter your name (First Last): " name
 read -r -p "Enter your email: " email
-read -r -p "Enter your cohort (c or java): " cohort
-read -r -p "Enter your bitbucket team (e.g. te-cin-cohort-4): " team
+
 
 echo
 echo "Setting Up Global Configuration Settings"
@@ -28,7 +28,7 @@ git config --global difftool.code.cmd "code -w -d \$LOCAL \$REMOTE"
 echo
 echo "Configuring Upstream..."
 
-git remote add upstream "https://bitbucket.org/${team}/${cohort}-main"
-git config branch.master.mergeOptions "--no-edit"
+git remote add upstream "https://bitbucket.org/te-phl-cohort-4/java-main-green"
+git config branch.main.mergeOptions "--no-edit"
 
 echo "Done."
