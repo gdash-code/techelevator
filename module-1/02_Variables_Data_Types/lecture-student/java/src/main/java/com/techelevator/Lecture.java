@@ -8,6 +8,9 @@ public class Lecture {
 		1. Create a variable to hold an int and call it numberOfExercises.
 			Then set it to 26.
 		*/
+		int numberOfExercises;
+		numberOfExercises = 26;
+		System.out.println(numberOfExercises);
 
 		//System.out.println(numberOfExercises);
 
@@ -15,6 +18,10 @@ public class Lecture {
 		2. Create a variable to hold a double and call it half.
 			Set it to 0.5.
 		*/
+		double half;
+		half = 0.5;
+
+		System.out.println(half);
 
 		//System.out.println(half);
 
@@ -22,12 +29,19 @@ public class Lecture {
 		3. Create a variable to hold a String and call it name.
 			Set it to "TechElevator".
 		*/
+		String name;
+		name = "TechElevator";
+		System.out.println(name);
 
 		//System.out.println(name);
 
 		/*
 		4. Create a variable called seasonsOfFirefly and set it to 1.
 		*/
+		int seasonsoFirefly;
+		seasonsoFirefly = 1;
+
+		System.out.println(seasonsoFirefly);
 
 		//System.out.println(seasonsOfFirefly);
 
@@ -40,6 +54,9 @@ public class Lecture {
 		/*
 		6. Create a variable called pi and set it to 3.1416.
 		*/
+		double pi;
+		pi = 3.1416;
+		System.out.println(pi);
 
 		//System.out.println(pi);
 
@@ -50,15 +67,25 @@ public class Lecture {
 		/*
 		8. Create and set a variable that holds the number of buttons on your mouse.
 		*/
+		int mouseButtons;
+		mouseButtons = 6;
+
+		System.out.println("Number of Mouse Buttons: " + mouseButtons);
 
 		/*
 		9. Create and set a variable that holds the percentage of battery left on
 		your phone.
 		*/
+		double phoneBatteryRemaining;
+		phoneBatteryRemaining = 0.97;
+
+		System.out.println("Battery at: " + phoneBatteryRemaining);
 
 		/*
 		10. Create an int variable that holds the difference between 121 and 27.
 		*/
+		int result10 = 121 - 27;
+		System.out.println(result10);
 
 		/*
 		11. Create a double that holds the addition of 12.3 and 32.1.
@@ -81,6 +108,10 @@ public class Lecture {
 		/*
 		15. Now do the same as exercise 14, but use the += operator.
 		*/
+		String first = "Ash";
+		String last = "williams";
+
+		System.out.println( first += last);
 
 		/*
 		16. Create a variable to hold "Saw" and add a 2 onto the end of it.
@@ -126,7 +157,8 @@ public class Lecture {
 		/*
 		26. Now set doneWithExercise to true.
 		*/
-		
+
+
 	}
 
 }

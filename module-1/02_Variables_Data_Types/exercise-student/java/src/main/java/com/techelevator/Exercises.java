@@ -13,6 +13,8 @@ public class Exercises {
 		int birdsThatFlyAway = 1;
 		int birdsRemaining = birdsOnABranch - birdsThatFlyAway;
 
+		System.out.println(birdsRemaining);
+
         /* Exercise 2
         2. There are 6 birds and 3 nests. How many more birds are there than
         nests?
@@ -22,51 +24,95 @@ public class Exercises {
 		int numberOfNests = 3;
 		int numberOfExtraBirds = numberOfBirds - numberOfNests;
 
+		System.out.println(numberOfExtraBirds);
+
         /* Exercise 3
         3. 3 raccoons are playing in the woods. 2 go home to eat dinner. How
         many raccoons are left in the woods?
         */
+		int numberOfRaccoons = 3;
+		int raccoonsThatLeave = 2;
+		int raccoonsLeftInWoods = numberOfRaccoons - raccoonsThatLeave;
+
+		System.out.println(raccoonsLeftInWoods);
 
 
         /* Exercise 4
         4. There are 5 flowers and 3 bees. How many less bees than flowers?
         */
+		int flowers = 5;
+		int bees = 3;
+		int lessBees = flowers - bees;
+
+		System.out.println(lessBees);
 
 
         /* Exercise 5
         5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
         breadcrumbs, too. How many pigeons are eating breadcrumbs now?
         */
+		int lonelyPigeon = 1;
+		int anotherPigeon = 1;
+		int _pigeons = lonelyPigeon + anotherPigeon;
+
+		System.out.println(_pigeons);
 
 
         /* Exercise 6
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
         */
+		int fenceOwls = 3;
+		int otherOwls = 2;
+		int totalOwls = fenceOwls + otherOwls;
+
+		System.out.println(totalOwls);
 
 
         /* Exercise 7
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
+		int homeBeavers = 2;
+		int swimBeaver = 1;
+		int stillHomeBeavers = homeBeavers - swimBeaver;
+
+		System.out.println(stillHomeBeavers);
 
 
         /* Exercise 8
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
         */
+		int treeLimbToucans = 2;
+		int anotherToucan = 1;
+		int totalToucans = treeLimbToucans + anotherToucan;
+
+		System.out.println(totalToucans);
 
 
         /* Exercise 9
         9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
         are there than nuts?
         */
+		int squirrelsTree = 4;
+		int treeNuts = 2;
+		int moreSquirrels = squirrelsTree - treeNuts;
+
+		System.out.println(moreSquirrels);
 
 
         /* Exercise 10
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
+		double quarter = .25;
+		double dime = .10;
+		double twoNickels = .10;
+		double totalMoneyFound = quarter + dime + twoNickels;
+
+		System.out.println(totalMoneyFound);
+
 
 
         /* Exercise 11
@@ -75,12 +121,23 @@ public class Exercises {
         Mrs. Flannery's class bakes 17 muffins. How many muffins does first
         grade bake in all?
         */
+		int briersClass = 18;
+		int macAdamsClass = 20;
+		int flanneryClass = 17;
+		int totalMuffins = briersClass + macAdamsClass + flanneryClass;
+
+		System.out.println(totalMuffins);
 
 
         /* Exercise 12
         12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
         much did she spend in all for the two toys?
         */
+		double yoyo = .24;
+		double whistle = .14;
+		double totalSpent = yoyo + whistle;
+
+		System.out.println(totalSpent);
 
 
         /* Exercise 13
@@ -88,6 +145,11 @@ public class Exercises {
         and 10 mini marshmallows.How many marshmallows did she use
         altogether?
         */
+		int largeMarshmallows = 8;
+		int miniMarshmallows = 10;
+		int fiveRiceKrispieTreats = largeMarshmallows + miniMarshmallows;
+
+		System.out.println(fiveRiceKrispieTreats);
 
 
         /* Exercise 14
@@ -95,47 +157,86 @@ public class Exercises {
         Elementary School received 17 inches of snow. How much more snow
         did Mrs. Hilt's house have?
         */
+		int mrsHiltsHouse = 29;
+		int brecknockElementary = 17;
+		int moreSnowThanElementary = mrsHiltsHouse - brecknockElementary;
+
+		System.out.println(moreSnowThanElementary);
 
 
         /* Exercise 15
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
         case. How much money does she have left?
         */
+		double mrsHiltMoney = 10.00;
+		double moneySpentTruck = 3.00;
+		double pencilCase = 2.00;
+		double moneyLeft = mrsHiltMoney - moneySpentTruck - pencilCase;
+
+		System.out.println(moneyLeft);
 
 
         /* Exercise 16
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
         marbles does he have now?
         */
+		int marblesJosh = 16;
+		int lostMarbles = 7;
+		int totalMarbles = marblesJosh - lostMarbles;
+
+		System.out.println(totalMarbles);
 
 
         /* Exercise 17
         17. Megan has 19 seashells. How many more seashells does she need to
         find to have 25 seashells in her collection?
         */
+		int meganSeashells = 19;
+		int totalSeashells = 25;
+		int findSeashells = totalSeashells - meganSeashells;
+
+		System.out.println(findSeashells);
 
 
         /* Exercise 18
         18. Brad has 17 balloons. 8 balloons are red and the rest are green. How
         many green balloons does Brad have?
         */
+		int bradBalloons = 17;
+		int redBalloons = 8;
+		int greenBalloons = bradBalloons - redBalloons;
+
+		System.out.println(greenBalloons);
 
 
         /* Exercise 19
         19. There are 38 books on the shelf. Marta put 10 more books on the shelf.
         How many books are on the shelf now?
         */
+		int shelfBooks = 38;
+		int martaBooks = 10;
+		int totalBooks = shelfBooks + martaBooks;
+
+		System.out.println(totalBooks);
 
 
         /* Exercise 20
         20. A bee has 6 legs. How many legs do 8 bees have?
         */
+		int beeLegs = 6;
+		int eightBees = beeLegs * 8;
+
+		System.out.println(eightBees);
 
 
         /* Exercise 21
         21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
         cream cones cost?
         */
+		double iceCreamCone = .99;
+		double twoIceCreamCones = iceCreamCone * 2;
+
+		System.out.println(twoIceCreamCones);
 
 
         /* Exercise 22
@@ -143,18 +244,33 @@ public class Exercises {
         rocks to complete the border. She has 64 rocks. How many more rocks
         does she need to complete the border?
         */
+		int rocksNeeded = 125;
+		int totalRocks = 64;
+		int completeBorder = rocksNeeded - totalRocks;
+
+		System.out.println(completeBorder);
 
 
         /* Exercise 23
         23. Mrs. Hilt had 38 marbles. She lost 15 of them. How many marbles does
         she have left?
         */
+		int hiltMarbles = 38;
+		int goneMarbles = 15;
+		int remainingMarbles = hiltMarbles - goneMarbles;
+
+		System.out.println(remainingMarbles);
 
 
         /* Exercise 24
         24. Mrs. Hilt and her sister drove to a concert 78 miles away. They drove 32
         miles and then stopped for gas. How many miles did they have left to drive?
         */
+		int farConcert = 78;
+		int gasMiles = 32;
+		int remainingMiles = farConcert - gasMiles;
+
+		System.out.println(remainingMiles);
 
 
         /* Exercise 25
@@ -162,18 +278,33 @@ public class Exercises {
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time (in minutes) did she spend shoveling snow?
         */
+		int minutesShovelingSnowMorning = 90;
+		int minutesShovelingSnowAfternoon = 45;
+		int totalTimeShovelingSnow = minutesShovelingSnowAfternoon + minutesShovelingSnowMorning;
+
+		System.out.println(totalTimeShovelingSnow);
 
 
         /* Exercise 26
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
+		double hotDogs = 6.0;
+		double costHotDog = .50;
+		double costOfHotDogs = hotDogs * costHotDog;
+
+		System.out.println(costOfHotDogs);
 
 
         /* Exercise 27
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
+		int hiltCents = 50;
+		int pencilCost = 7;
+		int howManyPencils = hiltCents / pencilCost;
+
+		System.out.println(howManyPencils);
 
 
         /* Exercise 28
