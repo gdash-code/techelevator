@@ -14,15 +14,35 @@ public class Lecture {
 		 * is not the case for most classes */
 
 		/* create an new instance of String using a literal */
+		String greeting = "Hello, World!";
+		System.out.println("greeting is: " + greeting);
 
+		String greeting2 = new String("Hello to you too!");
+		System.out.println("CTOR Method: " + greeting2);
 		
 		System.out.println();
 		System.out.println("******************************");
 		System.out.println("****** MEMBER METHODS ******");
 		System.out.println("******************************");
-		System.out.println();
+		//System.out.println();
 
+		System.out.println("\n--- charAt(int)---");
+		String myName = "Ash Williams";
+		char first = myName.charAt(0);
+		char last = myName.charAt(myName.length()-1);
 
+		System.out.println("First and last characters are:  " + first + last);
+
+		System.out.println("\n--- contains(String)---");
+
+		Boolean myNameContainsSh = myName.contains("sh");
+		System.out.println("Does myName contain 'sh'? : " + myNameContainsSh );
+		System.out.println("Strings are immutable: " + myName);
+
+		myNameContainsSh = myName.contains("sh");
+		System.out.println("Does myName contain 'sh' ?: " +myNameContainsSh);
+
+		System.out.println("\n--- Other Methods ---");
 		/* Other commonly used methods:
 		 *
 		 * endsWith
@@ -41,7 +61,8 @@ public class Lecture {
 		System.out.println("****** EQUALITY ******");
 		System.out.println("**********************");
 		System.out.println();
-
+		String hello1 = "";
+		String hello2 = "";
 
 
 		/* Double equals will compare to see if the two variables, hello1 and
