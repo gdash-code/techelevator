@@ -30,9 +30,12 @@ public class RectangleWall extends Wall{
     @Override
     public String toString(){
 
-        //String result = String.format("%1 (%2x%3) rectangle", this.getName(), getLength(), getHeight());
+        //String result = String.format("%1 (%2x%3) rectangle",
+        // this.getName(), getLength(), getHeight());
 
         return getName() + " (" + length + "x" + height + ") rectangle"; //added space
 
     }
+
+
 }
