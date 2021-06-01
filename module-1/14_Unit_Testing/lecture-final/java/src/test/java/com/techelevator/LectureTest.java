@@ -74,7 +74,7 @@ public class LectureTest {
 	public void startsWith_returns_true_if_a_string_starts_with_the_specified_characters() {
 		System.out.println("startsWith_returns_true_if_a_string_starts_with_the_specified_characters"); // FOR DEMONSTRATION PURPOSES ONLY, don't do this in your own tests
 
-		/* The assertTrue method validates that the boolean value provided as an arugment
+		/* The assertTrue method validates that the boolean value provided as an argument
 		 * is true and fails the test if it is false. */
 
 		String theString = "Hello World!"; // Arrange
