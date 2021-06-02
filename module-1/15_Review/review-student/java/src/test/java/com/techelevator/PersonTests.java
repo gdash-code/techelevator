@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import com.techelevator.crm.Person;
 import org.junit.Assert;
 import org.junit.Test;
 

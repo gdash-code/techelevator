@@ -1,5 +1,7 @@
 package com.techelevator.hr;
 
+import com.techelevator.crm.Customer;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -9,6 +11,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 public class EmployeeTests {
+
+private Object Double;
 
     @Test
     public void getFullNameReturnsCorrectFormat() {
@@ -35,4 +39,38 @@ public class EmployeeTests {
 
         assertEquals("Salary should remain the same when raise percentage is negative.",100, employee.getSalary(),0.0);
     }
+
+    @Test
+    public void Employee_GetBalance_ForGrooming(){
+        Customer customer = new Customer();
+        Map<String,Double>services=new HashMap<>();
+        services.put("Grooming",2.00);
+        double expected=2.00;
+        double result=customer.getBalanceDue(new HashMap<String, Double>());
+        Assert.assertEquals(Double,Double); }
+    @Test
+    public void Employee_GetBalance_ForWalking(){
+        Customer customer = new Customer();
+        Map<String,Double>services=new HashMap<>();
+        services.put("Walking",2.00);
+        double expected=2.00;
+        double result=customer.getBalanceDue(new HashMap<String, Double>());
+        Assert.assertEquals(Double,Double); }
+    @Test
+    public void Employee_GetBalance_ForSitting(){
+        Customer customer = new Customer();
+        Map<String,Double>services=new HashMap<>();
+        services.put("Sitting",1.00);
+        double expected=1.00;
+        double result=customer.getBalanceDue(new HashMap<String, Double>());
+        Assert.assertEquals(Double,Double); }
+    @Test
+    public void Employee_GetBalance_ForNoServices(){
+        Customer customer = new Customer();
+        Map<String,Double>services=new HashMap<>();
+        services.put(" ",0.00);
+        double expected=0.00;
+        double result=customer.getBalanceDue(new HashMap<String, Double>());
+        Assert.assertEquals(Double,Double); }
 }
+

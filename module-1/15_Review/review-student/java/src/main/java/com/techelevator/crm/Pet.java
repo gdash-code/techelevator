@@ -9,6 +9,10 @@ public class Pet {
     private String species;
     private List<String> vaccinations = new ArrayList<>();
 
+    public Pet() {
+
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -38,15 +42,15 @@ public class Pet {
         this.species = species;
     }
 
-    public String listVaccinations(){
+    public String listVaccinations(List<String> vaccinations){
         StringBuilder sb = new StringBuilder();
-
+this.vaccinations = vaccinations;
         int vaxCounter = 0;
 
-        for(String vax : vaccinations){ //once in for each loop each object becomes individual within the objects list, so can no longer get all objects
+        for(String vax : this.vaccinations){ //once in for each loop each object becomes individual within the objects list, so can no longer get all objects
             sb.append(vax); //if the index of the current vax is not the end of the current list add a comma otherwise add nothing
 
-            sb.append(vaxCounter < vaccinations.size() - 1? ", " : "" );
+            sb.append(vaxCounter < this.vaccinations.size() - 1? ", " : "" );
 
             vaxCounter++;
         }

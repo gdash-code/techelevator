@@ -1,4 +1,4 @@
-package com.techelevator;
+package com.techelevator.crm;
 
 import java.util.Map;
 
