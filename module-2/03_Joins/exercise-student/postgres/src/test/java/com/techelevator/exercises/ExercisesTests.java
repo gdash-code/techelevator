@@ -37,7 +37,7 @@ public class ExercisesTests {
 	@BeforeClass
 	public static void setupDataSource() throws SQLException, IOException, FileNotFoundException, ClassNotFoundException {
 		dataSource = new SingleConnectionDataSource();
-		dataSource.setUrl("jdbc:postgresql://localhost:5432/MovieDB");
+		dataSource.setUrl("jdbc:postgresql://localhost:5432/MoviesDB");
 		dataSource.setUsername("postgres");
 		dataSource.setPassword("postgres1");
 		/* The following line disables autocommit for connections
