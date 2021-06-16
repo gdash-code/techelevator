@@ -21,6 +21,7 @@ public class USCitiesAndParksCLI {
 
     public static void main(String[] args) {
         BasicDataSource dataSource = new BasicDataSource();
+        //declares data source and assigns to approriate members
         dataSource.setUrl("jdbc:postgresql://localhost:5432/UnitedStates");
         dataSource.setUsername("postgres");
         dataSource.setPassword("postgres1");
@@ -57,7 +58,7 @@ public class USCitiesAndParksCLI {
         }
     }
 
-    private void manageCityInfo() {
+    private void manageCityInfo() { //declares a new city prompt for city
         City city = promptForCity();
         System.out.println();
         displayCity(city);

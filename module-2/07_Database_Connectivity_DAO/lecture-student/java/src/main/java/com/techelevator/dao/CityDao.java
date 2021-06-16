@@ -4,7 +4,7 @@ import com.techelevator.model.City;
 
 import java.util.List;
 
-public interface CityDao {
+public interface CityDao { //relying on polymorphism need to find some implementing class
 
     City getCity(long cityId);
 

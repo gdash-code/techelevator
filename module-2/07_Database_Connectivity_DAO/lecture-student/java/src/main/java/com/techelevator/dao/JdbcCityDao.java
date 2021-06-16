@@ -15,13 +15,13 @@ public class JdbcCityDao implements CityDao {
     public JdbcCityDao(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
-
+//The constructor takes in a datasource object it's a private member being created through constructor
     @Override
     public City getCity(long cityId) {
         City city = null;
         String sql = "SELECT city_id, city_name, state_abbreviation, population, area " +
                      "FROM city " +
-                     "WHERE city_id = ?;";
+                     "WHERE city_id = ?;"; //a parameter for the "?"
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, cityId);
         if (results.next()) {
             city = mapRowToCity(results);
