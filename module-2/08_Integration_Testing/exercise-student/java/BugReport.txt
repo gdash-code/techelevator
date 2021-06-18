@@ -1,43 +1,43 @@
 Bug 1
 -----
-Test that demonstrates problem:
+Test that demonstrates problem:get timesheets by project id
 
-Expected output:
+Expected output:1
 
-Actual output:
+Actual output:3
 
 How did you fix this bug?
-
+changed select statement where to project_id
 
 Bug 2
 -----
-Test that demonstrates problem:
+Test that demonstrates problem: Get time sheet by employee id
 
-Expected output:
+Expected output:2
 
-Actual output:
+Actual output:3
 
 How did you fix this bug?
-
+Changed the if statement to a while, added semi colon after ? in WHERE statement
 
 Bug 3
 -----
-Test that demonstrates problem:
+Test that demonstrates problem: updating timesheet
 
-Expected output:
+Expected output: local date 2021-18-06
 
-Actual output:
+Actual output: 2000-01-01
 
 How did you fix this bug?
 
 
 Bug 4
 -----
-Test that demonstrates problem:
+Test that demonstrates problem: get billable hours
 
-Expected output:
+Expected output:1.0
 
-Actual output:
+Actual output:2.5
 
 How did you fix this bug?
-
+Added billable to select query 

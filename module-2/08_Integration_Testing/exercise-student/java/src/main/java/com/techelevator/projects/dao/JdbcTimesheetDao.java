@@ -32,11 +32,12 @@ public class JdbcTimesheetDao implements TimesheetDao {
     @Override
     public List<Timesheet> getTimesheetsByEmployeeId(Long employeeId) {
         List<Timesheet> timesheets = new ArrayList<>();
-        String sql = "SELECT timesheet_id, employee_id, project_id, date_worked, hours_worked, billable, description " +
+        String sql = "SELECT timesheet_id, employee_id, project_id, date_worked, hours_worked, " +
+                "billable, description " +
                      "FROM timesheet " +
-                     "WHERE employee_id = ?";
+                     "WHERE employee_id = ?;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, employeeId);
-        if (results.next()) {
+        while (results.next()) {
             Timesheet timesheet = mapRowToTimesheet(results);
             timesheets.add(timesheet);
         }
@@ -46,9 +47,10 @@ public class JdbcTimesheetDao implements TimesheetDao {
     @Override
     public List<Timesheet> getTimesheetsByProjectId(Long projectId) {
         List<Timesheet> timesheets = new ArrayList<>();
-        String sql = "SELECT timesheet_id, employee_id, project_id, date_worked, hours_worked, billable, description " +
+        String sql = "SELECT timesheet_id, employee_id, project_id, date_worked, " +
+                "hours_worked, billable, description " +
                      "FROM timesheet " +
-                     "WHERE employee_id = ?";
+                     "WHERE project_id = ?;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, projectId);
         while (results.next()) {
             Timesheet timesheet = mapRowToTimesheet(results);
@@ -61,9 +63,14 @@ public class JdbcTimesheetDao implements TimesheetDao {
     public Timesheet createTimesheet(Timesheet newTimesheet) {
         String sql = "INSERT INTO timesheet (employee_id, project_id, date_worked, hours_worked, billable, description) " +
                      "VALUES (?, ?, ?, ?, ?, ?) RETURNING timesheet_id;";
-        Long newId = jdbcTemplate.queryForObject(sql, Long.class, newTimesheet.getEmployeeId(), newTimesheet.getProjectId(),
-                     newTimesheet.getDateWorked(), newTimesheet.getHoursWorked(), newTimesheet.isBillable(),
-                     newTimesheet.getDescription());
+        Long newId = jdbcTemplate.queryForObject(sql, Long.class,
+                newTimesheet.getEmployeeId(),
+                newTimesheet.getProjectId(),
+                newTimesheet.getDateWorked(),
+                newTimesheet.getHoursWorked(),
+                newTimesheet.isBillable(),
+                newTimesheet.getDescription());
+
         return getTimesheet(newId);
     }
 
@@ -71,9 +78,13 @@ public class JdbcTimesheetDao implements TimesheetDao {
     public void updateTimesheet(Timesheet updatedTimesheet) {
         String sql = "UPDATE timesheet " +
                      "SET employee_id = ?, project_id = ?, date_worked = ?, hours_worked = ?, description = ? " +
-                     "WHERE timesheet_id = ?";
-        jdbcTemplate.update(sql, updatedTimesheet.getEmployeeId(), updatedTimesheet.getProjectId(),
-                updatedTimesheet.getDateWorked(), updatedTimesheet.getHoursWorked(), updatedTimesheet.getDescription(),
+                     "WHERE timesheet_id = ?;";
+        jdbcTemplate.update(sql,
+                updatedTimesheet.getEmployeeId(),
+                updatedTimesheet.getProjectId(),
+                updatedTimesheet.getDateWorked(),
+                updatedTimesheet.getHoursWorked(),
+                updatedTimesheet.getDescription(),
                 updatedTimesheet.getTimesheetId());
     }
 
@@ -86,9 +97,9 @@ public class JdbcTimesheetDao implements TimesheetDao {
     @Override
     public double getBillableHours(Long employeeId, Long projectId) {
         double billableHours = 0;
-        String sql = "SELECT SUM(hours_worked) AS billable_hours " +
+        String sql = "SELECT SUM(hours_worked) AS billable_hours, billable " +
                      "FROM timesheet " +
-                     "WHERE employee_id = ? AND project_id = ?";
+                     "WHERE employee_id = ? AND project_id = ? GROUP BY billable ;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, employeeId, projectId);
         if (results.next()) {
             billableHours = results.getDouble("billable_hours");
