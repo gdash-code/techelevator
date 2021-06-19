@@ -40,4 +40,4 @@ Expected output:1.0
 Actual output:2.5
 
 How did you fix this bug?
-Added billable to select query 
+Added billable to select query
