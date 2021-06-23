@@ -54,7 +54,7 @@ public class AuctionServiceTest {
     	// Arrange
         String testAddString = "a,b,c,99.99";
         Auction fake = new Auction(3, "a", "b", "c", 99.99);
-        // Need array length from getAll() - mocked with mock autions array
+        // Need array length from getAll() - mocked with mock auctions array
         when(mockRestTemplate.getForObject(
                 Mockito.eq(AuctionService.API_URL),
                 Mockito.eq(Auction[].class)))
