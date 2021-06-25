@@ -39,7 +39,7 @@ public class HotelService {
     try {
       reservation = restTemplate.postForObject(BASE_URL + "hotels/" + reservation.getHotelID() + "/reservations", entity, Reservation.class);
     } catch (RestClientResponseException ex) {
-      console.printError(ex.getRawStatusCode() + " : " + ex.getStatusText());
+      console.printError(ex.getRawStatusCode() + " : " + ex.getStatusText() );
     } catch (ResourceAccessException ex) {
       console.printError(ex.getMessage());
     }
