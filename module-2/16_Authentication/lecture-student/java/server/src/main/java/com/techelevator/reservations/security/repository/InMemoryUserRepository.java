@@ -44,8 +44,8 @@ public class InMemoryUserRepository implements UserRepository {
             }
         } else {
             // setup 2 default users if the file does not exist
-            users.add(new User(1L, "user", "password", "user", true));
-            users.add(new User(2L, "admin", "password", "admin", true));
+            users.add(new User(1L, "user", "password", "userrole", true));
+            users.add(new User(2L, "admin", "password", "adminrole", true));
         }
     }
 
