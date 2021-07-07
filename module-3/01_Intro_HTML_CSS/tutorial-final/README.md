@@ -179,7 +179,7 @@ The HTML `<main>` element contains the primary content directly related to the `
 </main>
 ```
 
-Lastly, you'll create a footer. The footer contain links to PNN's various social networks and a copyright notification. Add this code after the `<main>` section:
+Lastly, you'll create a footer. The footer contains links to PNN's various social networks and a copyright notification. Add this code after the `<main>` section:
 
 ```html
 <footer>

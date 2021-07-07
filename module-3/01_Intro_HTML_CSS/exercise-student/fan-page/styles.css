@@ -1,0 +1,40 @@
+/* This is my first css document */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    text-align: center;
+    background-color : rosybrown;
+}
+
+.class-for-sign-up {
+    background-color: royalblue;
+}
+
+div.container{
+    column-gap: 40px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-decoration: underline;
+    font-weight: 600;
+    text-align: center;
+    color: firebrick;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 24px;
+    color: goldenrod;
+}
+
+h3{
+    text-decoration: underline;
+    font-size: 16px;
+    text-decoration: underline;
+    color: gold;
+}
+
+img {
+    height: 200px;
+}

@@ -1,0 +1,131 @@
+html {
+    height: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'raleway', sans-serif;
+
+    background-image: linear-gradient(to bottom, #858585, #85baff);
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+div.trello-list{
+    display: inline-block;
+    width: 300px;
+    background-color: rgb(194, 186, 175);
+    border-radius: 3px;
+}
+
+div.trello-list h2 {
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+div.trello-list h2 {
+    margin: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+div.trello-list ol {
+    margin: 0;
+    padding: 0;
+}
+
+div.trello-list li {
+    list-style: none;
+    background-color: rgba(212, 164, 100, 0.712);
+    font-size: .9rem;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+div.trello-list li:hover {
+    background-color: rgb(rgb(172, 71, 71), rgb(113, 192, 113), blue);
+    color: #7a2c7a;
+}
+
+div.trello-list li:last-child{
+    margin-bottom: 0px;
+}
+
+div.trello-list a {
+    display: block;
+    text-decoration: none;
+    color: springgreen;
+        padding: 8px, 0px, 8px, 4px;
+    font-size: .8rem;
+}
+
+div.trello-list a:hover {
+    background-color: steelblue;
+}
+
+div.trello-list{
+   margin-right: 10px;
+   vertical-align: top;
+}
+
+div.trello-list li {
+    white-space: normal;
+}
+
+body {
+    white-space: nowrap;
+}
+
+.labels span {
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    height: 8px;
+    border-radius: 3px;
+}
+
+.label.pathway {
+    background-color: tomato;
+}
+
+.label.individual {
+    background-color: violet;
+}
+
+.label.pair {
+    background-color: teal;
+}
+
+.label.general {
+    background-color: rgb(0, 255, 0);
+}
+
+header {
+    position: fixed;
+
+    top: 0px;
+    height: 50px;
+}
+
+main {
+    margin-top: 70px;
+}
+
+header > h1,
+header > p {
+    display: inline-block;
+    height: 25px;
+    padding-right: 25px;
+    vertical-align: middle;
+    border-right: 2px solid antiquewhite;
+}
+
+header > h1 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body class="class-for-sign-up">
+        
+    <header>
+        <h1>The L Word Fan Page</h1>
+        <p>Welcome to the fan page for the tv show The L Word</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <main>
+        <h2>Join the Club</h2>
+        <form action="https://fakewebsite.com/api/signup" method="POST" onsubmit="return confirm('Are you sure you want to submit?');">
+            <div class="container">
+                <label for="firstName">Name:</label>
+                <input id="firstName" name="firstName" type="text" required />
+            </div>
+            <div class="container">
+                <label for="lastName">Last Name:</label>
+                <input id="lastName" name="lastName" type="text" required/>
+            </div>
+            <div class="container">
+                <label for="email">Email Address:</label>
+                <input id="email" name="email" type="text" required/>
+            </div>
+            <div class="container">
+                <label for="dateOfBirth">Date of Birth:</label>
+                <input id="dateOfBirth" name="dateOfBirth" type="date" />
+            </div>
+            <div class="container">
+                <label for="color">Favorite Color:</label>
+                <input id="color" name="color" type="color" />
+            </div>
+            <div class="container">
+                <label for="number">Favorite Number:</label>
+                <input id="number" name="number" type="number" />
+            </div>
+        
+            <div class="container">
+                <label for="favoriteCharacter">Favorite Character</label>
+                <select name="favoriteCharacter" id="favoriteCharacter" multiple="true">
+                  <option>Shane</option>
+                  <option>Carmen</option>
+                  <option>Jenny</option>
+                  <option>Bette</option>
+                </select>
+            </div>
+            <div class="container">
+                <input type="submit"  />
+            </div>
+        </form>
+    </main>
+    
+</body>
+</html>

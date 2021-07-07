@@ -1,0 +1,23 @@
+img {
+    height: 200px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: wheat;
+}
+
+h1 {
+    font-size: 32px;
+    color: brown;
+}
+
+h2{
+    font-size: 24px;
+    color: blueviolet;
+}
+
+h3{
+    font-size: 16px;
+    color: cornflowerblue;
+}

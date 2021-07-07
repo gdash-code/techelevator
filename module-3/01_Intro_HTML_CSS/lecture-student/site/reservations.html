@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Bits & Bytes</h1>
+        <p>Make a Reservation</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Bits & Bytes Home</a>
+    </nav>
+
+    <main>
+        <h2>Reservations Form</h2>
+        <form method="GET" action="https:example.com/api/reservation">
+            <div>
+                <label id="lblReservationName" for="txtReservationName">Name:</label>
+                <input id="txtReservationName" for="reservationName" type="text">
+            </div>
+            <div>
+                <label id="lblNumberofGuests" for="nbrNumberOfGuests">Number of Guests:</label>
+                <input id="nbrNumberofGuests" name="numberOfGuests" type="number" min="1" max="8"/>
+            </div>
+
+            <div>
+                <input type="submit">
+            </div>
+
+
+        </form>
+    </main>
+</body>
+</html>
