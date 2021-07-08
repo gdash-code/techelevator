@@ -26,3 +26,9 @@ aside {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+aside > img {
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+}
