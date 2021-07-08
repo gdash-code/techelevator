@@ -35,4 +35,64 @@ aside > img {
 
 main {
   margin-left: 200px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+aside > nav > ul > li {
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: solid rgba(0, 173, 238, 0.4) 1px;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  width: 80%;
+  line-height: 2;
+}
+
+li > a {
+  font-weight: bold;
+  color: #00ADEE;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  height: 120px;
+}
+
+header > img {
+  height: 80%;
+}
+
+img.banner {
+  display: block;
+  width: 100%;
+}
+
+section > div {
+  display: inline-block;
+  width: 33%;
+  padding-right: 20px;
+  margin-top: 20px;
+  vertical-align: auto;
+}
+
+section > div > h2 {
+  color: #8CC36F;
+}
+
+h2 > i {
+  margin-right: 10px;
+}
+
+div:not(#contact-us) {
+border-right: solid rgba(170, 239, 135, 0.8) 1px;
+}
+
+div:not(#first-child){
+  padding-left: 20px;
 }
