@@ -121,3 +121,27 @@ div#experience-web {
 div#experience-design {
     grid-area: experience-design;
 } 
+
+@media screen and (max-width: 1024px){
+    main#main-grid{
+        column-gap: 35px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "headline headline"
+            "student-quote student-picture"
+            "student-quote student-contact"
+            "student-profile student-profile"
+            "experience-grid experience-grid"
+        ;
+    }
+
+    main#main-grid > div#experience-grid{
+        column-gap: 20px;
+        row-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "experience-code experience-database"
+        "experience-web experience-design"
+        ;
+    }
+}
