@@ -145,3 +145,27 @@ div#experience-design {
         ;
     }
 }
+
+@media screen and (max-width:450px){
+    main#main-grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "headline"
+        "student-picture"
+        "student-contact"
+        "student-quote"
+        "student-profile"
+        "experience-grid"
+        ;
+    }
+
+    main#main-grid > div#experience-grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "experience-code"
+        "experience-web"
+        "experience-database"
+        "experience-design"
+        ;
+    }
+}
