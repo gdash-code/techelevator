@@ -4,16 +4,58 @@
 
 // Single line comment
 
+//page level variables
+
+let pageArray = [
+  "Bob",
+  "Mary",
+  "Jen",
+  "Dave"
+];
+
 /**
  * Functions start with the word function.
  * They don't have a return type and the naming convention is camel-case.
  */
 function variables() {
   // Declares a variable where the value cannot be changed
+  const daysPerWeek = 7;
+  console.log(daysPerWeek);
   // Declares a variable those value can be changed
+  let daysPerMonth = 30;
+  console.log('There are' + daysPerWeek + 'days in a month');
+  console.log(`I said, there are ${daysPerMonth} days in a month`)
   // Declares a variable that will always be an array
+  const weekdays = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ];
+
+  console.log(weekdays);
+
+  console.table(weekdays);
 }
 
+function funcRefDemo(x, y){
+  return x+y;
+}
+
+function addTwoNum(x, y){
+  return x+y;
+}
+
+function multTwoNum(x, y){
+  return x*y;
+}
+
+function demoFunctionalNature(value1, value2, mathFunction){
+  return mathFunction(x,y);
+}
 /**
  * Functions can also accept parameters.
  * Notice the parameters do not have types.
@@ -21,8 +63,8 @@ function variables() {
  * @param {Number} param2 The second number to display
  */
 function printParameters(param1, param2) {
-  console.log(`The value of param1 is ${param1}`);
-  console.log(`The value of param2 is ${param2}`);
+  console.log(`The value of param1 is ${param1} and the type of param1 is ${typeof param1}`);
+  console.log(`The value of param2 is ${param2} and the type of param1 is ${typeof param2}`);
 }
 
 /**
@@ -70,14 +112,24 @@ function objects() {
       "Milton Waddams",
       "Samir Nagheenanajar",
       "Michael Bolton"
-    ]
+    ],
+    toString: function() {
+      return `${person.firstName} ${person.lastName} ${person.age} years old`
+    }
   };
 
   // Log the object
+  console.log(person);
 
   // Log the first and last name
+  console.log(`${person.firstName} ${person.lastName}`);
 
   // Log each employee
+  for(let i = 0; i < person.employees.length; i++){
+    console.log( `Employee ${i} is ${person.employees[i]}`);
+  }
+
+  console.log(person.toString());
 }
 
 /*
