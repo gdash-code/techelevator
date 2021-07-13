@@ -17,3 +17,10 @@ body {
   text-align: center;
   border: solid 1px #777;
 }
+
+.container,
+.box{
+  display: flex;
+  flex-grow: 1;
+}
+

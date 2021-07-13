@@ -22,3 +22,17 @@ body {
 .box:nth-child(4) {
   background-color: #005270;
 }
+
+.box:nth-child(2),
+.box:nth-child(4){
+  flex-grow: 2;
+}
+.box:nth-child(1),
+.box:nth-child(3){
+  flex-grow: 1;
+}
+
+.container,
+.box{
+  display: flex;
+}
