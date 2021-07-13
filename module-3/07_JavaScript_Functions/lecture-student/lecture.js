@@ -28,6 +28,10 @@ function printToConsole(value) {
  * @param {number} secondParameter the second parameter to multiply
  */
 
+ function multiplyNoUndefined(firstParameter=0, secondParameter=0){
+   return firstParameter * secondParameter;
+ }
+
 /**
  * This version makes sure that no parameters are ever missing. If
  * someone calls this function without parameters, we default the
@@ -71,7 +75,10 @@ function returnBeforeEnd(firstParameter, secondParameter) {
  * that block and any block underneath it. Once the block that the
  * variable was defined in ends, the variable disappears.
  */
-function scopeTest() {
+
+
+
+ function scopeTest() {
   // This variable will always be in scope in this function
   let inScopeInScopeTest = true;
 
@@ -82,11 +89,24 @@ function scopeTest() {
   }
 
   // scopedToBlock doesn't exist here so an error will be thrown
-  if (inScopeInScopeTest && scopedToBlock) {
+if(typeof scopedToBlock !== 'undefined'){
+  if (inScopeInScopeTest && scopedToBlock)  {
     console.log("This won't print!");
   }
+ }else{
+   console.log("scopeToBlock is not in scope and cannot be accessed")
+ }
 }
 
+
+/**
+ * 
+ * @param {string} name The name of the quirky person
+ * @param {number} age The age of quirky person
+ * @param {string[]} listOfQuirks The list of funny quirks
+ * @param {string} separator The character or string used to separate the quirks
+ * @returns {string} The full english sentence describing a person and their quirks
+ */
 function createSentenceFromUser(name, age, listOfQuirks = [], separator = ', ') {
   let description = `${name} is currently ${age} years old. Their quirks are: `;
   return description + listOfQuirks.join(separator);
@@ -94,14 +114,32 @@ function createSentenceFromUser(name, age, listOfQuirks = [], separator = ', ') 
 
 /**
  * Takes an array and, using the power of anonymous functions, generates
- * their sum.
+ * their sum adding it to the baseValue using a second
+ *  .reduce parameter representing the initial value.
  *
  * @param {number[]} numbersToSum numbers to add up
  * @returns {number} sum of all the numbers
  */
 function sumAllNumbers(numbersToSum) {
-  return numbersToSum.reduce();
+  return numbersToSum.reduce(
+    (sum, numberToAdd) => {
+      return sum + numberToAdd;
+    }
+  );
 }
+
+let baseValue = 250;
+
+function sumAllNumbersAddToBase(numbersToSum) {
+  return numbersToSum.reduce(
+    (sum, numberToAdd) => {
+      return sum + numberToAdd;
+    },
+    baseValue
+  );
+}
+
+
 
 /**
  * Takes an array and returns a new array of only numbers that are
@@ -111,4 +149,26 @@ function sumAllNumbers(numbersToSum) {
  * @returns {number[]} a new array with only those numbers that are
  *   multiples of 3
  */
-function allDivisibleByThree(numbersToFilter) {}
+function allDivisibleByThree(numbersToFilter) {
+  return numbersToFilter.filter(
+    (number) => {
+      return number % 3 == 0;
+    }
+  );
+
+}
+
+/**
+ * takes an array and generates their sum.
+ *  Uses non anonymous function
+ * @name sumAllNumbersNonAnon
+ * @param {number[]} numbersToSum numbers to add up 
+ * @return {number} sum of all the numbers
+ */
+function sumAllNumbersNonAnon(numbersToSum){
+  return numbersToSum.reduce(addNumbers);
+}
+
+function addNumbers(value1, value2){
+  return value1 + value2;
+}
