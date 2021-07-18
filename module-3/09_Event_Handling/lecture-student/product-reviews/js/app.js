@@ -60,6 +60,9 @@ function displayReview(review) {
 
 // LECTURE STARTS HERE ---------------------------------------------------------------
 
+document.addEventListener('DOMContentLoaded', () => {
+
+
 // set the product reviews page title
 setPageTitle();
 // set the product reviews page description
@@ -67,16 +70,59 @@ setPageDescription();
 // display all of the product reviews on our page
 displayReviews();
 
+const descDisplay = document.querySelector('.description');
+descDisplay.addEventListener('click',(event) => {
+  
+  
+  
+  toggleDescriptionEdit(event.target);
+
+})
+
+const inputDesc = document.getElementById('inputDesc');
+inputDesc.addEventListener('keyup', (event) => {
+
+if(event.key === 'Enter'){
+  //process change
+  exitDescriptionEdit(event.target, true);
+}
+if(event.key === "Escape"){
+  //cancel entry
+  exitDescriptionEdit(event.target, false);
+}
+
+})
+
+inputDesc.addEventListener('mouseleave', (event) =>{
+  exitDescriptionEdit(event.target, false);
+
+})
+
+const toggleFormButton = document.getElementById('btnToggleForm');
+toggleFormButton.addEventListener('click', () => {
+  showHideForm();
+})
+
+
+const saveFormBtn = document.getElementById('btnSaveReview');
+saveFormBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  saveReview();
+})
+});
+
+
+
 /**
  * Take an event on the description and swap out the description for a text box.
  *
  * @param {Event} event the event object
  */
-function toggleDescriptionEdit(desc) {
-  const textBox = desc.nextElementSibling;
-  textBox.value = description;
+function toggleDescriptionEdit(descElement) {
+  const textBox = descElement.nextElementSibling;
+  textBox.value = descElement.innerText;
   textBox.classList.remove('d-none');
-  desc.classList.add('d-none');
+  descElement.classList.add('d-none');
   textBox.focus();
 }
 
@@ -130,4 +176,21 @@ function resetFormValues() {
 /**
  * I will save the review that was added using the add review from
  */
-function saveReview() {}
+function saveReview() {
+const name = document.getElementById('name');
+const title = document.getElementById('title');
+const rating = document.getElementById('rating');
+const review = document.getElementById('review');
+
+const newReview = {
+  reviewer: name.value,
+  title: title.value,
+  rating: rating.value,
+  review: review.value
+}
+
+reviews.push(newReview);
+displayReview(newReview);
+showHideForm();
+
+}
