@@ -12,7 +12,6 @@ const groceries = [
   { id: 9, name: 'Salad', completed: false },
   { id: 10, name: 'Tea', completed: false }
 ];
-
 /**
  * This function will get a reference to the title and set its text to the value
  * of the pageTitle variable that was set above.
@@ -21,7 +20,6 @@ function setPageTitle() {
   const title = document.getElementById('title');
   title.innerText = pageTitle;
 }
-
 /**
  * This function will loop over the array of groceries that was set above and add them to the DOM.
  */
@@ -36,6 +34,42 @@ function displayGroceries() {
     ul.appendChild(li);
   });
 }
-
+function markCompleted(item){
+    if(item.getAttribute('class') !== 'completed'){
+      item.setAttribute('class', 'completed');
+    } 
+}
+function markIncomplete(item){
+  if(item.getAttribute('class') === 'completed'){
+    item.classList.remove('completed');
+  } 
+}
+document.addEventListener('DOMContentLoaded',()=>{
 setPageTitle();
 displayGroceries();
+const listItems = document.querySelector('ul').children;
+const btn = document.getElementById('toggleAll');
+for (let i = 0; i < listItems.length; i++){
+  listItems[i].addEventListener('click', () => {
+      markCompleted(listItems[i])
+  });
+  listItems[i].addEventListener('dblclick', () => {
+      markIncomplete(listItems[i]);     
+  });
+}
+btn.addEventListener('click', ()=> {
+  if(allItemsIncomplete){
+    for (let i = 0; i < listItems.length; i++){
+      markCompleted(listItems[i])
+      btn.innerText ='Mark All Incomplete';
+      allItemsIncomplete = false;
+    }   
+  } else {
+    for (let i = 0; i < listItems.length; i++){
+      markIncomplete(listItems[i]); 
+      btn.innerText ='Mark All Complete';
+      allItemsIncomplete = true;
+    }
+  }
+});
+});
